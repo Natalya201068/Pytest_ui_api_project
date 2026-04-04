@@ -1,4 +1,4 @@
-from test_pages.WebPage import WebPage
+from pages.WebPage import WebPage
 import allure
 import pytest
 from test_ui.utils import film_names
