@@ -1,7 +1,7 @@
 import pytest
 from dotenv import load_dotenv
 import os
-from pages.ApiPage import ApiPage
+from test_pages.ApiPage import ApiPage
 
 load_dotenv()
 

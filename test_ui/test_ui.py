@@ -1,4 +1,4 @@
-from pages.WebPage import WebPage
+from test_pages.WebPage import WebPage
 import allure
 import pytest
 from test_ui.utils import film_names
@@ -55,7 +55,7 @@ def test_search_by_actor(driver):
     web_page = WebPage(driver)
     web_page.wait_alert()
     web_page.confirm_dismiss()
-    web_page.search_by_actor()
+    web_page.search_by_actor(actor)
     with allure.step('Проверить, что актер найден'):
         assert actor in driver.page_source
 

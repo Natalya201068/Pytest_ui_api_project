@@ -56,8 +56,8 @@ def test_get_director_with_id(api):
 @allure.title('Поиск фильма')
 @allure.story('Поиск фильма с неправильным id')
 @pytest.mark.api
-def test_get_film_with_bad_id(api, film_id):
-    film_id - 1234567890
+def test_get_film_with_bad_id(api):
+    film_id = 1234567890
     status_code, film_name = api.get_film_with_id(film_id)
     with allure.step('Проверить, что статус-код ответа 400'):
         assert status_code == 400
