@@ -5,7 +5,7 @@
 ### _Ссылка на проект:_
 [Финальный проект по ручному тестированию](https://qa116-2.yonote.ru/share/00e92b97-5ba3-43d6-a121-f494c5f006a9)
 ### Шаги
-1. Склонировать проект 'git clone https://github.com/Natalya201068/Pytest_ui_api_project.git'
+1. Склонировать проект 'git clone [ссылка](https://github.com/Natalya201068/Pytest_ui_api_project.git')
 2. Установить зависимости 'pip install -r requirements.txt'
 3. Запустить тесты 'pytest' 
 4. Сгенерировать отчет 'allure generate allure-files -o allure-report'
@@ -37,9 +37,12 @@
 
 ### Настройка окружения
 
-1. Создайте файл `.env` в корне проекта
-2. Скопируйте содержимое из `.env.example` 
-3. Заполните переменные своими данными:
+1. Создайте файл `.env` в корне проекта 
+2. Заполните переменные своими данными:
+ - URL=[ссылка](https://api.poiskkino.dev/)
+ - X_API_KEY=your_api_key_here
 
-URL=https://test-site.com
-X_API_KEY=your_api_key_here
+  
+[Ссылка на документацию](https://api.poiskkino.dev/documentation#/)
+
+
