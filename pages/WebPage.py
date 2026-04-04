@@ -25,8 +25,8 @@ class WebPage:
     def confirm_dismiss(self):
         try:
             WebDriverWait(self.driver, 1).until(
-                EC.presence_of_element_located((By.XPATH,
-                                                '//button[text()="Не сейчас"]'))
+                EC.presence_of_element_located((
+                    By.XPATH, '//button[text()="Не сейчас"]'))
             ).click()
         except Exception:
             pass
@@ -47,8 +47,8 @@ class WebPage:
             EC.presence_of_element_located((By.CSS_SELECTOR,
                                             'input[name="kp_query"]'))
         ).send_keys(actor_name)
-        button = self.driver.find_element(By.CLASS_NAME,
-                                         'search-form-submit-button__icon')
+        button = self.driver.find_element(
+            By.CLASS_NAME, 'search-form-submit-button__icon')
         button.click()
 
     @allure.step('Найти фильм по годам создания. Расширенный поиск.')

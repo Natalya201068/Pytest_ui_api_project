@@ -7,9 +7,11 @@
 ### Шаги
 1. Склонировать проект 'git clone [ссылка](https://github.com/Natalya201068/Pytest_ui_api_project.git')
 2. Установить зависимости 'pip install -r requirements.txt'
-3. Запустить тесты 'pytest' 
-4. Сгенерировать отчет 'allure generate allure-files -o allure-report'
-5. Открыть отчет 'allure open allure-report'
+3. Запустить тесты 'python -m pytest'
+4. Запустить тесты api 'python -m pytest -m "api"'
+5. Запустить тесты ui 'python -m pytest -m "ui"'
+6. Сгенерировать отчет 'allure generate allure-files -o allure-report'
+7. Открыть отчет 'allure open allure-report'
 
 ### Стек
 - Pytest
