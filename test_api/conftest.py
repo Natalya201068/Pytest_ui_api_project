@@ -7,6 +7,6 @@ load_dotenv()
 
 
 @pytest.fixture(scope="session")
-def api():
+def api() -> ApiPage:
     url = os.getenv("URL")
     return ApiPage(url)

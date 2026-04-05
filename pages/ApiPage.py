@@ -7,8 +7,7 @@ load_dotenv()
 
 class ApiPage:
     def __init__(self, url: str) -> None:
-        self.url = url
-        self.url = os.getenv("URL")
+        self.url = url or os.getenv("URL")
         self.headers = {
             "accept": "application/json",
             "X-API-KEY": os.getenv("X_API_KEY")

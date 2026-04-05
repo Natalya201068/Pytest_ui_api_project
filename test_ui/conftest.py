@@ -6,7 +6,7 @@ import random
 
 
 @pytest.fixture(scope="session")
-def driver():
+def driver() -> webdriver.Chrome:
     with allure.step('Открыть и настроить браузер'):
         chrome_options = uc.ChromeOptions()
         chrome_options.add_argument(

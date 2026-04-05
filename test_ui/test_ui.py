@@ -8,7 +8,7 @@ from test_ui.utils import film_names
 @allure.story('Поиск фильма по названию')
 @pytest.mark.ui
 @pytest.mark.parametrize("film_name", film_names)
-def test_get_film(driver, film_name):
+def test_get_film(driver, film_name: str) -> None:
     web_page = WebPage(driver)
     web_page.wait_alert()
     web_page.confirm_dismiss()
@@ -22,7 +22,7 @@ def test_get_film(driver, film_name):
 @allure.title('Поиск персоны')
 @allure.story('Поиск актера по имени')
 @pytest.mark.ui
-def test_get_actor(driver):
+def test_get_actor(driver) -> None:
     name_actor = 'Жан-Клод Ван Дамм'
     web_page = WebPage(driver)
     web_page.wait_alert()
@@ -35,7 +35,7 @@ def test_get_actor(driver):
 @allure.title('Расширенный поиск')
 @allure.story('Поиск фильмов, созданных в промежуток времени')
 @pytest.mark.ui
-def test_search_by_years(driver):
+def test_search_by_years(driver) -> None:
     year1, year2 = '1935', '1944'
     film_in_years = 'Александр Невский'
     web_page = WebPage(driver)
@@ -50,7 +50,7 @@ def test_search_by_years(driver):
 @allure.title('Расширенный поиск')
 @allure.story('Поиск информации об актере')
 @pytest.mark.ui
-def test_search_by_actor(driver):
+def test_search_by_actor(driver) -> None:
     actor = 'Иннокентий Смоктуновский'
     web_page = WebPage(driver)
     web_page.wait_alert()
@@ -63,7 +63,7 @@ def test_search_by_actor(driver):
 @allure.title('Расширенный поиск')
 @allure.story('Поиск фильма по ключевым словам')
 @pytest.mark.ui
-def test_search_by_keywords(driver):
+def test_search_by_keywords(driver) -> None:
     keywords = 'Инопланетная цивилизация'
     film_by_keywords = 'Отроки во Вселенной'
     web_page = WebPage(driver)
@@ -78,7 +78,7 @@ def test_search_by_keywords(driver):
 @allure.title('Поиск фильма')
 @allure.story('Ввод пробелов в поисковую строку')
 @pytest.mark.ui
-def test_search_by_space(driver):
+def test_search_by_space(driver) -> None:
     web_page = WebPage(driver)
     web_page.wait_alert()
     web_page.confirm_dismiss()
@@ -91,7 +91,7 @@ def test_search_by_space(driver):
 @allure.title('Поиск фильма')
 @allure.story('Нажать кнопку поиска при пустом поле ввода')
 @pytest.mark.ui
-def test_search_without_query(driver):
+def test_search_without_query(driver) -> None:
     web_page = WebPage(driver)
     web_page.wait_alert()
     web_page.confirm_dismiss()

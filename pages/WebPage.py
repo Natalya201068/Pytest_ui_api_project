@@ -15,7 +15,7 @@ class WebPage:
     def wait_alert(self) -> None:
         self.driver.get(self.ui_url)
         try:
-            WebDriverWait(self.driver, 1).until(
+            WebDriverWait(self.driver, 3).until(
                 EC.presence_of_element_located((By.ID, 'js-button'))
             ).click()
         except Exception:
@@ -24,7 +24,7 @@ class WebPage:
     @allure.step('Закрыть рекламный баннер, если есть')
     def confirm_dismiss(self):
         try:
-            WebDriverWait(self.driver, 1).until(
+            WebDriverWait(self.driver, 3).until(
                 EC.presence_of_element_located((
                     By.XPATH, '//button[text()="Не сейчас"]'))
             ).click()
